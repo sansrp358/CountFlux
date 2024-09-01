@@ -1,6 +1,8 @@
-##CountFlux Project
+##CountFlux Project 
 
-## --used dataset in JS - need to add a property like data-name, data-value to the HTML element
+--dataset, textContent, setInterval, clearInterval
+
+--used dataset in JS - need to add a property like data-name, data-value to the HTML element
 
 and now for accessing those in jS we can use dataset.value, dataset.name
 In JavaScript, dataset is a property of HTML elements that allows you to access and manipulate custom data attributes (data-\*) directly. The dataset property is an object that contains all the custom data attributes of an element.
