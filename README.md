@@ -1,43 +1,23 @@
-## Numbers Project
+##CountFlux Project
 
-#### Structure (HTML)
+## --used dataset in JS - need to add a property like data-name, data-value to the HTML element
 
-- section
-  - article
-    - span.number data-value="value" (0)
-    - p (text)
+and now for accessing those in jS we can use dataset.value, dataset.name
+In JavaScript, dataset is a property of HTML elements that allows you to access and manipulate custom data attributes (data-\*) directly. The dataset property is an object that contains all the custom data attributes of an element.
+For data-name, the property is accessed as dataset.name.
+eg - <div id="myElement" data-value="123" data-name="example"></div>
+const element = document.getElementById('myElement');
+console.log(element.dataset.value); // Outputs: "123"
+console.log(element.dataset.name); // Outputs: "example"
 
-#### Logic (JS)
+--textContent is a property of DOM elements that allows you to get or set the text content of an element. It's a straightforward way to manipulate the text inside an HTML element without affecting its HTML structure.
 
-- select all span's with .number
-- iterate over and log each span
-- create updateCount function
-- accept el as argument
-- invoke and pass each span el in iteration
+<div id="myElement">Hello, world!</div>
 
-```js
-const updateCount = (el) => {
-  const value = parseInt(el.dataset.value);
-  const increment = Math.ceil(value / 1000);
-  let initialValue = 0;
-};
-```
-
-```js
-const updateCount = (el) => {
-  const value = parseInt(el.dataset.value);
-  const increment = Math.ceil(value / 1000);
-  let initialValue = 0;
-
-  const increaseCount = setInterval(() => {
-    initialValue += increment;
-
-    if (initialValue > value) {
-      el.textContent = `${value}+`;
-      clearInterval(increaseCount);
-      return;
-    }
-    el.textContent = `${initialValue}+`;
-  }, 1);
-};
-```
+--To get
+const element = document.getElementById('myElement');
+console.log(element.textContent); // Outputs: "Hello, world!"
+--To set
+const element = document.getElementById('myElement');
+element.textContent = 'New text content';
+console.log(element.textContent); // Outputs: "New text content
